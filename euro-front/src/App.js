@@ -1,12 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Header from './components/header'; 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <button type="button" class="btn btn-danger">Danger</button>
-      </header>
+     <Header />
     </div>
   );
 }
