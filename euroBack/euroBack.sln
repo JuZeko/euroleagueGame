@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euroBack", "euroBack\euroBack.csproj", "{C21B9903-0C0F-4660-AB5B-406EEB0EC684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C21B9903-0C0F-4660-AB5B-406EEB0EC684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21B9903-0C0F-4660-AB5B-406EEB0EC684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21B9903-0C0F-4660-AB5B-406EEB0EC684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21B9903-0C0F-4660-AB5B-406EEB0EC684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4378B0DF-3B36-4B2E-8CF8-C17202E7C935}
+	EndGlobalSection
+EndGlobal
