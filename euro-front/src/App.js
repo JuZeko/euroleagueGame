@@ -1,4 +1,5 @@
 import "./App.css";
+import 'react-toastify/ReactToastify.css';
 import Login from './pages/loginPage'; 
 
 function App() {
