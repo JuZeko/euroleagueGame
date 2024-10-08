@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.DunkLebron{
+  background-image: url(./assets/LebronDunk.gif);
+  background-size:contain;
+  background-position: center;
+  border: "1rem solid";
+}
+.DunkDeRozen{
+  background-image: url(./assets/dunkDeRozen.gif);
+  background-size:auto;
+  background-position: center;
+}
+
+.LebronDunk{
+  max-width: 100%;
+  height:auto;
+  background-image: url(./assets/LebronDunk1.gif);
+  background-position: center;
+}
+
+.basketballPass{
+  background-image: url(./assets/basketballPass.gif);
+  background-size:auto;
+  background-position: center;
+}
+
+.Jokic{
+  background-image: url(./assets/Jokic.gif);
+  background-size:auto;
+  background-position: center;
+}
+
+.Kobe{
+  max-width: 100%;
+  height:auto;
+  background-image: url(./assets/Kobe.gif);
+  background-size:cover;
+  background-position: center;
+}
+
