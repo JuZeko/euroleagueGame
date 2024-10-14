@@ -16,6 +16,9 @@ const Header = () => {
           <li className="nav-item">
             <Link className="nav-link" to="/predictionPage">Dalyviu spejimai</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/adminPage">Administratoriaus puslapis</Link>
+          </li>
         </ul>
       </div>
     </nav>
