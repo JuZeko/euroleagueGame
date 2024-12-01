@@ -11,10 +11,10 @@ const Header = () => {
             <Link className="nav-link" to="/mainPage">Pagrindinis puslapis</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/predictionTable">Turnirinė lentelė</Link>
+            <Link className="nav-link" to="/predictionResultPage">Turnirinė lentelė</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/predictionPage">Dalyviu spejimai</Link>
+            <Link className="nav-link" to="/predictionResultPage">Dalyviu spejimai</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/adminPage">Administratoriaus puslapis</Link>

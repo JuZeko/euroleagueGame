@@ -5,9 +5,8 @@ import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { AuthProvider } from "./auth/UseAuth";
 import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
-import PredictionPage from "./pages/PredictionPage";
+import PredictionResultPage from "./pages/PredictionResultPage";
 import { Secret } from "./auth/Secret";
-import PredictionTable from "./pages/PredictionTable";
 import AdminPage from "./pages/AdminPage";
 
 function App() {
@@ -32,18 +31,10 @@ function App() {
           }
         />
         <Route
-          path="/predictionPage"
+          path="/predictionResultPage"
           element={
             <ProtectedRoute>
-              <PredictionPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/predictionTable"
-          element={
-            <ProtectedRoute>
-              <PredictionTable />
+              <PredictionResultPage />
             </ProtectedRoute>
           }
         />
