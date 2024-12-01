@@ -1,8 +1,13 @@
 import React from "react";
 import Header from "../components/Header";
 import UserTable from "../components/UserTable";
+import { UserPointsColumns } from '../data/TableColumns';
 
 const PredictionResultPage = () => {
+  const columns = UserPointsColumns() ?? []; 
+
+  console.log(columns)
+
   return (
     <div>
       <div>
@@ -13,7 +18,7 @@ const PredictionResultPage = () => {
         style={{ height: "100vh" }}
       >
         <div className="container text-center">
-          <UserTable />
+          <UserTable columns={ columns } />
         </div>
       </div>
     </div>
