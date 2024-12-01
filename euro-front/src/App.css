@@ -43,22 +43,11 @@
   background-position: center;
   border: "1rem solid";
 }
-.DunkDeRozen{
-  background-image: url(./assets/dunkDeRozen.gif);
-  background-size:auto;
-  background-position: center;
-}
 
 .LebronDunk{
   max-width: 100%;
   height:auto;
-  background-image: url(./assets/LebronDunk1.gif);
-  background-position: center;
-}
-
-.basketballPass{
-  background-image: url(./assets/basketballPass.gif);
-  background-size:auto;
+  background-image: url(./assets/LebronDunk.gif);
   background-position: center;
 }
 
@@ -76,3 +65,60 @@
   background-position: center;
 }
 
+
+.card {
+  background: var(--surface-card);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Table styles */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  background-color: #fff;
+  border: 2px solid #ff943d; /* Green border around the table */
+}
+
+/* Header styles */
+.header-row {
+  background-color: #ff943d; /* Green background for headers */
+  color: white;
+}
+
+.header-cell {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ff943d; /* Border for header cells */
+  font-weight: bold;
+}
+
+/* Body styles */
+.body-row:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for alternating rows */
+}
+
+.body-row:nth-child(odd) {
+  background-color: #fafafa; /* Slightly lighter for odd rows */
+}
+
+.body-cell {
+  padding: 15px;
+  border: 1px solid #ddd; /* Borders for body cells */
+  text-align: left;
+}
+
+/* Hover effects */
+.body-row:hover {
+  background-color: #f1f1f1;
+  border: 1px solid #ff943d; /* Highlighted border on hover */
+}
+
+/* Add rounded corners to the table */
+.styled-table {
+  border-radius: 8px;
+  overflow: hidden; /* Ensures border-radius works with table */
+}
