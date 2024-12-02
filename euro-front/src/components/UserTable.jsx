@@ -1,33 +1,18 @@
-import React, { useMemo } from 'react';
-import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table';
+import React, { useMemo } from "react";
+import {
+  useReactTable,
+  getCoreRowModel,
+  flexRender,
+} from "@tanstack/react-table";
 
-const UserTable = () => {
-  const columns = useMemo(
-    () => [
-      {
-        accessorKey: 'name',
-        header: 'Name',
-      },
-      {
-        accessorKey: 'points',
-        header: 'Points',
-      }
-    ],
-    []
-  );
+const UserTable = ({ columns,data }) => {
 
-  const data = useMemo(
-    () => [
-      { name: 'Alice', points: 25},
-      { name: 'Bob', points: 25 },
-      { name: 'Charlie', points: 25 },
-    ],
-    []
-  );
+  const memoizedData = React.useMemo(() => data, []);
+  const memoizedColumns = React.useMemo(() => columns, [columns]);
 
   const table = useReactTable({
-    data,
-    columns,
+    data:memoizedData,
+    columns: memoizedColumns,
     getCoreRowModel: getCoreRowModel(),
   });
 
@@ -52,10 +37,7 @@ const UserTable = () => {
           <tr key={row.id} className="body-row">
             {row.getVisibleCells().map((cell) => (
               <td key={cell.id} className="body-cell">
-                {flexRender(
-                  cell.column.columnDef.cell,
-                  cell.getContext()
-                )}
+                {flexRender(cell.column.columnDef.cell, cell.getContext())}
               </td>
             ))}
           </tr>

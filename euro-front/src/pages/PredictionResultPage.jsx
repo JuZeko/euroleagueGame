@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import UserTable from "../components/UserTable";
 
 const PredictionResultPage = () => {
   return (
@@ -13,7 +12,6 @@ const PredictionResultPage = () => {
         style={{ height: "100vh" }}
       >
         <div className="container text-center">
-          <UserTable />
         </div>
       </div>
     </div>
