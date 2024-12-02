@@ -1,10 +1,4 @@
 export const UserPointsColumns = [
-  {
-    Header: 'Name',
-    accessorKey: 'name',
-  },
-  {
-    Header: 'Points',
-    accessorKey: 'points',
-  },
+  { header: 'Name', accessorKey: 'name' },
+  { header: 'Points', accessorKey: 'points' },
 ];

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import CreateUserForm from "../components/CreateUserForm";
 import UserTable from "../components/UserTable";
+import { UserPointsColumns } from '../data/TableColumns';
 
 const AdminPage = () => {
   return (
@@ -12,7 +13,7 @@ const AdminPage = () => {
           <div className="col-sm">
             <CreateUserForm />
           </div>
-          <div className="col-sm"><UserTable/></div>
+          <div className="col-sm"><UserTable columns={ UserPointsColumns } /></div>
         </div>
         <div className="row">
           <div className="col-sm">
@@ -25,5 +26,6 @@ const AdminPage = () => {
     </div>
   );
 };
+
 
 export default AdminPage;

@@ -15,11 +15,13 @@ const UserTable = ({ columns }) => {
     []
   );
 
-  const memoizedColumns = React.useMemo(() => columns, []);
+  console.log(columns)
+
+  const memoizedColumns = React.useMemo(() => columns, [columns]);
 
   const table = useReactTable({
     data,
-    memoizedColumns,
+    columns: memoizedColumns,
     getCoreRowModel: getCoreRowModel(),
   });
 
