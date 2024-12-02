@@ -5,22 +5,13 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 
-const UserTable = ({ columns }) => {
-  const data = useMemo(
-    () => [
-      { name: "Alice", points: 25 },
-      { name: "Bob", points: 25 },
-      { name: "Charlie", points: 25 },
-    ],
-    []
-  );
+const UserTable = ({ columns,data }) => {
 
-  console.log(columns)
-
+  const memoizedData = React.useMemo(() => data, []);
   const memoizedColumns = React.useMemo(() => columns, [columns]);
 
   const table = useReactTable({
-    data,
+    data:memoizedData,
     columns: memoizedColumns,
     getCoreRowModel: getCoreRowModel(),
   });
