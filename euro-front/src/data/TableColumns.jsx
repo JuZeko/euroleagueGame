@@ -1,16 +1,10 @@
-import { useMemo } from "react";
-
-export const UserPointsColumns = () =>
-  useMemo(
-    () => [
-      {
-        accessorKey: "name",
-        header: "Name",
-      },
-      {
-        accessorKey: "points",
-        header: "Points",
-      },
-    ],
-    []
-  );
+export const UserPointsColumns = [
+  {
+    Header: 'Name',
+    accessorKey: 'name',
+  },
+  {
+    Header: 'Points',
+    accessorKey: 'points',
+  },
+];

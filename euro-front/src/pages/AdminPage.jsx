@@ -7,18 +7,18 @@ const AdminPage = () => {
   return (
     <div>
       <Header />
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-sm">
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-sm">
             <CreateUserForm />
           </div>
-          <div class="col-sm"><UserTable/></div>
+          <div className="col-sm"><UserTable/></div>
         </div>
-        <div class="row">
-          <div class="col-sm">
+        <div className="row">
+          <div className="col-sm">
             3
           </div>
-          <div class="col-sm">4</div>
+          <div className="col-sm">4</div>
         </div>
       </div>
       

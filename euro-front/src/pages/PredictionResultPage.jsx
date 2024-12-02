@@ -3,11 +3,9 @@ import Header from "../components/Header";
 import UserTable from "../components/UserTable";
 import { UserPointsColumns } from '../data/TableColumns';
 
+
 const PredictionResultPage = () => {
-  const columns = UserPointsColumns() ?? []; 
-
-  console.log(columns)
-
+  
   return (
     <div>
       <div>
@@ -18,7 +16,7 @@ const PredictionResultPage = () => {
         style={{ height: "100vh" }}
       >
         <div className="container text-center">
-          <UserTable columns={ columns } />
+          <UserTable columns={ UserPointsColumns } />
         </div>
       </div>
     </div>
