@@ -6,6 +6,7 @@ namespace euroBack.Controllers
     {
         public IdenityController()
         {
+
         }
-     }
+    }
 }
