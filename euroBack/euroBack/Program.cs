@@ -33,6 +33,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
