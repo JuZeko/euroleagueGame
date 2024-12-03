@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import CreateUserForm from "../components/CreateUserForm";
 import UserTable from "../components/UserTable";
-import { UserPointsColumns, UserData } from '../data/TableColumns';
+import { UserPointsColumns, UserData} from '../data/TableColumns';
 
 const AdminPage = () => {
 
+  const [data, setData] = useState(null);
+  
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+       
+
+        
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -15,7 +31,7 @@ const AdminPage = () => {
           <div className="col-sm">
             <CreateUserForm />
           </div>
-          <div className="col-sm"><UserTable columns={ UserPointsColumns } data = {UserData} /></div>
+         
         </div>
         <div className="row">
           <div className="col-sm">
