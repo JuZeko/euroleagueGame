@@ -1,27 +1,20 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useAuth } from "../auth/UseAuth";
-import { userLogin } from "../services/UserLoginService";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const loginData = {
     email: email,
     password: password,
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    var result = await userLogin(loginData);
-
-    if (result.status === 200) {
-      await login({ email });
-    } else {
-      alert("Invalid username or password");
-    }
+    navigate("/mainPage");
   };
   
   return (

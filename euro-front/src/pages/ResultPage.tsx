@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 
-const PredictionResultPage = () => {
+const ResultPage = () => {
   return (
     <div>
       <div>
@@ -18,4 +18,4 @@ const PredictionResultPage = () => {
   );
 };
 
-export default PredictionResultPage;
+export default ResultPage;

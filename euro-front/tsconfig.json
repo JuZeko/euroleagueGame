@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",        // Use Node's module resolution strategy
+    "esModuleInterop": true,           // Enables compatibility between CommonJS and ES Modules
+    "skipLibCheck": true,              // Skip type checking of declaration files
+    "resolveJsonModule": true,         // Allows importing JSON modules
+    "strict": true,                    // Enable all strict type-checking options
+    "jsx": "react-jsx",                // Use React JSX transform (for React 17 and later)
+    "module": "esnext",                // Use ES module system
+    "target": "esnext",                // Set the target ECMAScript version to ESNext
+    "baseUrl": ".",                    // Set the base directory for resolving non-relative module imports
+    "paths": {
+      "react-router-dom": ["node_modules/react-router-dom"]  // Ensure TypeScript finds the correct package
+    }
+  },
+  "include": ["src"],   // Include your source files from the "src" folder
+  "exclude": ["node_modules"]  // Exclude the "node_modules" folder to avoid unnecessary checks
+}
