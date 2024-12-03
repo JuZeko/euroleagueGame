@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import CreateUserForm from "../components/CreateUserForm";
-import UserTable from "../components/UserTable";
-import { UserPointsColumns, UserData} from '../data/TableColumns';
+import CreateUserForm from "../components/UserForm";
 
 const AdminPage = () => {
 
