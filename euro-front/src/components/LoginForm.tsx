@@ -43,7 +43,7 @@ const LoginForm = () => {
         />
       </div>
       <button type="submit" className="btn btn-success w-100">
-        Login
+        Užeik
       </button>
     </form>
   );

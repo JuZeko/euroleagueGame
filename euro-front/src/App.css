@@ -3,13 +3,6 @@
 
 }
 
-body{
-  background-position: center;
-  background-size:cover;
-  align-items: center;
-  justify-content: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,7 +39,9 @@ body{
 }
 
 .DunkLebron{
-  background-image: url(./assets/LebronDunk.gif);
+  background-image: url(./assets/dunk.gif);
+  background-size:cover;
+  background-position: center;
 }
 
 .LebronDunk{
