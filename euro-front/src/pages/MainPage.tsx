@@ -1,13 +1,21 @@
 import React from "react";
-import Header from "../components/Header"
+import Header from "../components/Header";
 
 const MainPage = () => {
   return (
     <div>
-      <Header/>
+      <div>
+        <Header />
+      </div>
+      <div className="container-fluid">
+        <div>
+          <div>
+            {/* Add your content here */}
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
+}
 
 export default MainPage;

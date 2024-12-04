@@ -19,7 +19,7 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group mb-3">
-        <label htmlFor="email">Vartotojo vardas</label>
+        <label htmlFor="email" ></label>
         <input
           type="email"
           className="form-control"
@@ -31,7 +31,7 @@ const LoginForm = () => {
         />
       </div>
       <div className="form-group mb-3">
-        <label htmlFor="password">Slaptažodis</label>
+        <label htmlFor="password"></label>
         <input
           type="password"
           className="form-control"
@@ -42,7 +42,7 @@ const LoginForm = () => {
           required
         />
       </div>
-      <button type="submit" className="btn btn-primary w-100">
+      <button type="submit" className="btn btn-success w-100">
         Login
       </button>
     </form>
