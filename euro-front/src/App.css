@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+
+}
+
+body{
+  background-position: center;
+  background-size:cover;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -39,17 +47,12 @@
 
 .DunkLebron{
   background-image: url(./assets/LebronDunk.gif);
-  background-size:contain;
-  background-position: center;
-  border: "1rem solid";
 }
 
 .LebronDunk{
-  max-width: 100%;
-  height:auto;
   background-image: url(./assets/LebronDunk.gif);
-  background-position: center;
 }
+
 
 .Jokic{
   background-image: url(./assets/Jokic.gif);
