@@ -9,5 +9,5 @@ const UserTable: React.FC<{ columns: any; data: any }> = ({
 
   return <div></div>;
 };
-
+//
 export default UserTable;
