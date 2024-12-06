@@ -7,16 +7,14 @@ import {
 } from '@tanstack/react-table';
 import '../styles/UserTable.css'; // Import the styles
 
-const UserTable = () => {
-  const data = React.useMemo(
-    () => [
-      { id: 1, name: 'Alice', age: 25 },
-      { id: 2, name: 'Bob', age: 30 },
-      { id: 3, name: 'Charlie', age: 35 },
-    ],
-    []
-  );
+// Define the User type
 
+
+interface UserTableProps {
+  tableData: User[]; // The data that will be passed to the table
+}
+
+const UserTable: React.FC<UserTableProps> = ({ tableData }) => {
   const handleEdit = (row: any) => {
     alert(`Editing user: ${row.original.name}`);
     // Add your logic for editing here
@@ -27,10 +25,10 @@ const UserTable = () => {
     // Add your logic for deleting here
   };
 
-  const columns = React.useMemo<ColumnDef<any>[]>(
+  const columns = React.useMemo<ColumnDef<User>[]>(
     () => [
       { accessorKey: 'id', header: 'ID' },
-      { accessorKey: 'name', header: 'Name' },
+      { accessorKey: 'userName', header: 'UserName' },
       { accessorKey: 'age', header: 'Age' },
       {
         id: 'actions', // Custom column for actions
@@ -72,7 +70,7 @@ const UserTable = () => {
   );
 
   const table = useReactTable({
-    data,
+    data: tableData , // Use tableData prop here
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
