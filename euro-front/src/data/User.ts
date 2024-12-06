@@ -1,5 +1,5 @@
 type User = {
-  userName: string;
-  points: number;
-  password: string;
+  userName: string | null;
+  points: number | null;
+  password: string | null;
 };
