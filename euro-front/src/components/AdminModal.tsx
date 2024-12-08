@@ -14,7 +14,7 @@ const AdminModal = ({
     const handleClose = () => {
         isVisible = true;
       };
-
+//
     return (
         <Modal
           show={isVisible}
