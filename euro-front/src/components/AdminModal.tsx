@@ -1,45 +1,50 @@
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
+
+interface AdminModalProps {
+  cardText: string;
+  isVisible: boolean;
+  onClose: () => void;  // Callback function to notify parent about closing
+}
 
 const AdminModal = ({
   cardText,
-  nameOfClass,
-  isVisible
-}: {
-  cardText: string;
-  nameOfClass: string;
-  isVisible:boolean
-}) => {
+  isVisible,
+  onClose
+}: AdminModalProps) => {
+  const [state, setState] = useState(isVisible);
 
-    const handleClose = () => {
-        isVisible = true;
-      };
-////ssss
-    return (
-        <Modal
-          show={isVisible}
-          size="lg"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">
-              Modal heading
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <h4>Centered Modal</h4>
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-              consectetur ac, vestibulum at eros.
-            </p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={handleClose}>Close</Button>
-          </Modal.Footer>
-        </Modal>
-      );
-    }
+  // Sync local state with isVisible prop
+  React.useEffect(() => {
+    setState(isVisible);
+  }, [isVisible]);
+
+  const handleClose = () => {
+    console.log('Closing modal');
+    setState(false);
+    onClose(); // Call the parent callback to notify about closing
+  };
+
+  return (
+    <Modal
+      show={state} // Use local state to control the modal visibility
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton onClick={handleClose}>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Pridėti dalyvi
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={handleClose}>Uždaryti</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+};
 
 export default AdminModal;

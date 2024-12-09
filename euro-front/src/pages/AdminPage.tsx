@@ -12,7 +12,6 @@ const AdminPage = () => {
     const fetchData = async () => {
       try {
         const response = await getAllUsers();
-        console.log(response)
 
         const users: User[] = response.data.map((item: any) => ({
           userName: item.userName ?? null,  
@@ -45,7 +44,15 @@ const AdminPage = () => {
         </div>
         <div className="row pt-3 ">
           <div className="col-sm col-sm d-flex justify-content-center align-items-centers ">
-          <AdminCard cardText={'Pridėti rungtynes'} nameOfClass={'Jokic'}/>
+          <AdminCard cardText={'Pridėti komandą'} nameOfClass={'Jokic'}/>
+          </div>
+          <div className="col-sm">
+            <UserTable tableData={data} />
+          </div>
+        </div>
+        <div className="row pt-3 ">
+          <div className="col-sm col-sm d-flex justify-content-center align-items-centers ">
+          <AdminCard cardText={'Pridėti rungtynes'} nameOfClass={'LebronDunk'}/>
           </div>
           <div className="col-sm">
             <UserTable tableData={data} />
