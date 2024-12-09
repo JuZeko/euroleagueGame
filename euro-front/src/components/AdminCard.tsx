@@ -25,7 +25,7 @@ const AdminCard = ({
         <h5 className="card-title">{cardText}</h5>
         <p className="card-text"></p>
         <button className="btn btn-primary" onClick={handleOpen} >Pridėti</button>
-        <AdminModal cardText={'Pridėti rungtynes'} nameOfClass={'Jokic'} isVisible={isModalOpen}/>
+        <AdminModal cardText={'Pridėti komandą'} isVisible={isModalOpen} onClose={handleClose}/>
       </div>
     </div>
   );
