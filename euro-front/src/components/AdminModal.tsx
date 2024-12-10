@@ -14,7 +14,6 @@ const AdminModal = ({
 }: AdminModalProps) => {
   const [state, setState] = useState(isVisible);
 
-  // Sync local state with isVisible prop
   React.useEffect(() => {
     setState(isVisible);
   }, [isVisible]);
@@ -22,12 +21,12 @@ const AdminModal = ({
   const handleClose = () => {
     console.log('Closing modal');
     setState(false);
-    onClose(); // Call the parent callback to notify about closing
+    onClose();
   };
 
   return (
     <Modal
-      show={state} // Use local state to control the modal visibility
+      show={state}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
