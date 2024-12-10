@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import LoginForm from "src/components/LoginForm";
+import LoginForm from "src/components/forms/LoginForm";
 
 const Login = () => {
   return (
