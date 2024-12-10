@@ -19,7 +19,6 @@ const AdminModal = ({
   }, [isVisible]);
 
   const handleClose = () => {
-    console.log('Closing modal');
     setState(false);
     onClose();
   };
@@ -33,7 +32,7 @@ const AdminModal = ({
     >
       <Modal.Header closeButton onClick={handleClose}>
         <Modal.Title id="contained-modal-title-vcenter">
-          Pridėti dalyvi
+          {cardText}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
