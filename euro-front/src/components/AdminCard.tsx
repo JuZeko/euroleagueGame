@@ -1,6 +1,10 @@
 import { useState } from "react";
 import AdminModal from "./AdminModal";
 
+interface ChildComponentProps {
+  CustomForm: React.ComponentType<any>;  // Expecting a React component
+}
+
 const AdminCard = ({
   cardText,
   nameOfClass,
