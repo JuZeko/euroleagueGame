@@ -2,7 +2,7 @@ import { useState } from "react";
 import AdminModal from "./AdminModal";
 
 interface ChildComponentProps {
-  CustomForm: React.ComponentType<any>;  // Expecting a React component
+  CreateUserForm: React.FC;  // Prop to accept a React component
 }
 
 const AdminCard = ({
