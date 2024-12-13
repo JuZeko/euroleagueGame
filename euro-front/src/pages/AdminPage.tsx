@@ -28,7 +28,7 @@ const AdminPage = () => {
 
     fetchData();
   }, []);
-  //#endregion//
+  //#endregion////
 
   return (
     <div>
