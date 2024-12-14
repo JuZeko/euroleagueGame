@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 
 interface AdminModalProps {
   cardText: string;
   isVisible: boolean;
-  onClose: () => void;  // Callback function to notify parent about closing
+  onClose: () => void;
+  AdminForm: React.ElementType; // Callback function to notify parent about closing
 }
 
 const AdminModal = ({
   cardText,
   isVisible,
-  onClose
+  onClose,
+  AdminForm,
 }: AdminModalProps) => {
   const [state, setState] = useState(isVisible);
 
@@ -31,12 +33,10 @@ const AdminModal = ({
       centered
     >
       <Modal.Header closeButton onClick={handleClose}>
-        <Modal.Title id="contained-modal-title-vcenter">
-          {cardText}
-        </Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">{cardText}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-
+        <AdminForm />
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={handleClose}>Uždaryti</Button>
