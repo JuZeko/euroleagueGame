@@ -1,16 +1,15 @@
 import { useState } from "react";
 import AdminModal from "./AdminModal";
 
-interface ChildComponentProps {
-  CreateUserForm: React.FC;  // Prop to accept a React component
-}
 
 const AdminCard = ({
   cardText,
   nameOfClass,
+  CustomForm
 }: {
   cardText: string;
   nameOfClass: string;
+  CustomForm: React.ComponentType<any>;
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,7 +28,7 @@ const AdminCard = ({
         <h5 className="card-title">{cardText}</h5>
         <p className="card-text"></p>
         <button className="btn btn-primary" onClick={handleOpen}>Pridėti</button>
-        <AdminModal cardText={cardText} isVisible={isModalOpen} onClose={handleClose}/>
+        <AdminModal cardText={cardText} isVisible={isModalOpen} onClose={handleClose} AdminForm={CustomForm} />
       </div>
     </div>
   );

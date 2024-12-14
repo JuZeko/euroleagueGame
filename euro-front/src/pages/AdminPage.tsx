@@ -28,7 +28,6 @@ const AdminPage = () => {
 
     fetchData();
   }, []);
-  //#endregion////
 
   return (
     <div>
@@ -39,6 +38,7 @@ const AdminPage = () => {
             <AdminCard
               cardText={"Pridėti dalyvi"}
               nameOfClass={"Kobe"}
+              CustomForm={CreateUserForm}
             />
           </div>
           <div className="col-sm">
@@ -50,6 +50,7 @@ const AdminPage = () => {
             <AdminCard
               cardText={"Pridėti komandą"}
               nameOfClass={"Jokic"}
+              CustomForm={CreateUserForm}
             />
           </div>
           <div className="col-sm">
@@ -61,6 +62,7 @@ const AdminPage = () => {
             <AdminCard
               cardText={"Pridėti rungtynes"}
               nameOfClass={"LebronDunk"}
+              CustomForm={CreateUserForm}
             />
           </div>
           <div className="col-sm">
