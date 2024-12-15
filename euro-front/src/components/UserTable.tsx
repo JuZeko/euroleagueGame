@@ -1,50 +1,48 @@
-import React from 'react';
+import React from "react";
 import {
   useReactTable,
   getCoreRowModel,
   flexRender,
   ColumnDef,
-} from '@tanstack/react-table';
-import '../styles/UserTable.css'; // Import the styles
-
-// Define the User type
-
+} from "@tanstack/react-table";
+import "../styles/UserTable.css"; // Import the styles
+import { DeleteUser } from "src/services/AdministrationService";
 
 interface UserTableProps {
-  tableData: User[]; // The data that will be passed to the table
+  tableData: User[];
 }
 
 const UserTable: React.FC<UserTableProps> = ({ tableData }) => {
   const handleEdit = (row: any) => {
     alert(`Editing user: ${row.original.name}`);
-    // Add your logic for editing here
   };
 
-  const handleDelete = (row: any) => {
-    alert(`Deleting user: ${row.original.name}`);
-    // Add your logic for deleting here
+  const handleDelete = async (row: any) => {
+    try {
+      console.log(row.original.id)
+      const data = await DeleteUser(row.original.id);
+    } catch (error) {}
   };
 
   const columns = React.useMemo<ColumnDef<User>[]>(
     () => [
-      { accessorKey: 'id', header: 'ID' },
-      { accessorKey: 'userName', header: 'UserName' },
-      { accessorKey: 'age', header: 'Age' },
+      { accessorKey: "id", header: "ID"},
+      { accessorKey: "userName", header: "UserName" },
       {
-        id: 'actions', // Custom column for actions
-        header: 'Actions',
+        id: "actions", // Custom column for actions
+        header: "Actions",
         cell: ({ row }) => (
           <div>
             <button
               onClick={() => handleEdit(row)}
               style={{
-                marginRight: '8px',
-                padding: '5px 10px',
-                backgroundColor: '#007bff',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
+                marginRight: "8px",
+                padding: "5px 10px",
+                backgroundColor: "#007bff",
+                color: "#fff",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
               }}
             >
               Edit
@@ -52,12 +50,12 @@ const UserTable: React.FC<UserTableProps> = ({ tableData }) => {
             <button
               onClick={() => handleDelete(row)}
               style={{
-                padding: '5px 10px',
-                backgroundColor: '#dc3545',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
+                padding: "5px 10px",
+                backgroundColor: "#dc3545",
+                color: "#fff",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
               }}
             >
               Delete
@@ -70,7 +68,7 @@ const UserTable: React.FC<UserTableProps> = ({ tableData }) => {
   );
 
   const table = useReactTable({
-    data: tableData , // Use tableData prop here
+    data: tableData, // Use tableData prop here
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
@@ -82,7 +80,10 @@ const UserTable: React.FC<UserTableProps> = ({ tableData }) => {
           <tr key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
               <th key={header.id}>
-                {flexRender(header.column.columnDef.header, header.getContext())}
+                {flexRender(
+                  header.column.columnDef.header,
+                  header.getContext()
+                )}
               </th>
             ))}
           </tr>
