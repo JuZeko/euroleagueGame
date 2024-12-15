@@ -15,6 +15,7 @@ const AdminPage = () => {
         const response = await getAllUsers();
 
         const users: User[] = response.data.map((item: any) => ({
+          id: item.id ?? null,
           userName: item.userName ?? null,
           points: item.points ?? null,
           password: item.password ?? null,

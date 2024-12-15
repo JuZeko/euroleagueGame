@@ -36,7 +36,7 @@ const AdminModal = ({
         <Modal.Title id="contained-modal-title-vcenter">{cardText}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <AdminForm />
+        <AdminForm isVisible = {true}/>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={handleClose}>Uždaryti</Button>

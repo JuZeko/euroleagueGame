@@ -49,3 +49,16 @@ export const createUser = async (FormValues: any) => {
     return error;
   }
 };
+
+export const DeleteUser = async (UserID: string) => {
+  console.log(UserID);
+  try {
+    const response = await axios.delete(
+      `https://localhost:7012/Administration/DeleteUser?id=${UserID}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error creating user:", error);
+    return error;
+  }
+};

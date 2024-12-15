@@ -28,7 +28,7 @@ const CreateUserForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const data = await createUser(formValues);  // Pass formValues to createUser
+      const data = await createUser(formValues);
       console.log('Created user:', data);
     } catch (error) {
      
