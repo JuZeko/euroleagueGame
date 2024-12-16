@@ -5,11 +5,9 @@ import AdminModal from "./AdminModal";
 const AdminCard = ({
   cardText,
   nameOfClass,
-  CustomForm
 }: {
   cardText: string;
   nameOfClass: string;
-  CustomForm: React.ComponentType<any>;
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -28,7 +26,7 @@ const AdminCard = ({
         <h5 className="card-title">{cardText}</h5>
         <p className="card-text"></p>
         <button className="btn btn-primary" onClick={handleOpen}>Pridėti</button>
-        <AdminModal cardText={cardText} isVisible={isModalOpen} onClose={handleClose} AdminForm={CustomForm} />
+        <AdminModal cardText={cardText} isVisible={isModalOpen} onClose={handleClose} AdminForm={"symbol"}/>
       </div>
     </div>
   );

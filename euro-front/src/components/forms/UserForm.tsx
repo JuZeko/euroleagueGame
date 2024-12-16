@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { FormContext } from 'src/data/Contexts/FormContext';
 import { createUser } from 'src/services/AdministrationService';
 
 interface FormValues {
@@ -9,6 +10,10 @@ interface FormValues {
 }
 
 const CreateUserForm: React.FC = () => {
+  const level = useContext(FormContext);
+
+  React.useEffect(()=> console.log(level), [])
+
   const [formValues, setFormValues] = useState<FormValues>({
     userName: '',
     email: '',
