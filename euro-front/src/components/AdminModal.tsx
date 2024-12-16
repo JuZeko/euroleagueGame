@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import CreateUserForm from "./forms/UserForm";
 
 interface AdminModalProps {
   cardText: string;
@@ -11,8 +12,7 @@ interface AdminModalProps {
 const AdminModal = ({
   cardText,
   isVisible,
-  onClose,
-  AdminForm,
+  onClose
 }: AdminModalProps) => {
   const [state, setState] = useState(isVisible);
 
@@ -36,7 +36,7 @@ const AdminModal = ({
         <Modal.Title id="contained-modal-title-vcenter">{cardText}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <AdminForm isVisible = {true}/>
+        <CreateUserForm/>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={handleClose}>Uždaryti</Button>
